@@ -1,0 +1,96 @@
+name: Publish apt Repository
+
+on:
+  repository_dispatch:
+    types: [new-package]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout apt-repo
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y reprepro gnupg
+
+      - name: Import GPG key
+        run: |
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+          echo "${{ secrets.GPG_PASSPHRASE }}" | gpg --batch --yes --pinentry-mode loopback \
+            --passphrase-fd 0 --quick-set-expire \
+            $(gpg --list-keys --with-colons | grep '^pub' | cut -d: -f5) 0
+
+      - name: Download package from triggering repo
+        run: |
+          REPO="${{ github.event.client_payload.repo }}"
+          RUN_ID="${{ github.event.client_payload.run_id }}"
+          PACKAGE="${{ github.event.client_payload.package }}"
+
+          # Scarica l'artifact dal repo sorgente
+          gh run download "$RUN_ID" \
+            --repo "Rob1c/$REPO" \
+            --name "$PACKAGE" \
+            --dir downloaded/
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup reprepro
+        run: |
+          mkdir -p conf
+          cat > conf/distributions <<EOF
+          Origin: Rob1c
+          Label: Rob1c Personal Repository
+          Codename: stable
+          Architectures: amd64 all
+          Components: main
+          Description: Volvex and Mimage apt repository
+          SignWith: F906DB2D0485473C5D7126795ADB545469E556DE
+          EOF
+
+          cat > conf/options <<EOF
+          basedir .
+          ask-passphrase
+          EOF
+
+      - name: Add package to reprepro
+        run: |
+          find downloaded/ -name "*.deb" | while read deb; do
+            echo "${{ secrets.GPG_PASSPHRASE }}" | reprepro --ask-passphrase \
+              -b . includedeb stable "$deb"
+          done
+
+      - name: Commit and push repo
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "Update apt repo: ${{ github.event.client_payload.package }}"
+          git push
+
+      - name: Deploy to GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    needs: publish
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
