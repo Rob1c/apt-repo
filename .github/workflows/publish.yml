@@ -41,7 +41,7 @@ jobs:
             --name "$PACKAGE" \
             --dir downloaded/
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
 
       - name: Setup reprepro
         run: |
