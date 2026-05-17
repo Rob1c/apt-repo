@@ -49,7 +49,7 @@ jobs:
           Origin: Rob1c
           Label: Rob1c Personal Repository
           Codename: stable
-          Architectures: amd64 all
+          Architectures: amd64
           Components: main
           Description: Volvex and Mimage apt repository
           SignWith: F906DB2D0485473C5D7126795ADB545469E556DE
@@ -57,15 +57,19 @@ jobs:
 
           cat > conf/options <<EOF
           basedir .
-          ask-passphrase
           EOF
 
       - name: Add package to reprepro
         run: |
           find downloaded/ -name "*.deb" | while read deb; do
-            echo "${{ secrets.GPG_PASSPHRASE }}" | reprepro --ask-passphrase \
-              -b . includedeb stable "$deb"
+            echo "${{ secrets.GPG_PASSPHRASE }}" | gpg --batch --yes \
+              --pinentry-mode loopback --passphrase-fd 0 \
+              --no-tty 2>/dev/null || true
+            reprepro -b . includedeb stable "$deb"
           done
+        env:
+          GNUPGHOME: /home/runner/.gnupg
+          GPG_TTY: /dev/null
 
       - name: Commit and push repo
         run: |
