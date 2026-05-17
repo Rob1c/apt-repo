@@ -25,8 +25,9 @@ jobs:
       - name: Import GPG key
         run: |
           echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
-          GPG_FP=$(gpg --list-keys --with-colons | grep '^fpr' | head -1 | cut -d: -f10)
-          echo "Fingerprint: $GPG_FP"
+          echo "allow-loopback-pinentry" >> ~/.gnupg/gpg-agent.conf
+          echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf
+          gpgconf --kill gpg-agent
 
       - name: Download package from triggering repo
         run: |
@@ -55,19 +56,14 @@ jobs:
           SignWith: F906DB2D0485473C5D7126795ADB545469E556DE
           EOF
 
-          cat > conf/options <<EOF
-          basedir .
-          EOF
-
       - name: Add package to reprepro
         run: |
           find downloaded/ -name "*.deb" | while read deb; do
-            echo "${{ secrets.GPG_PASSPHRASE }}" | gpg --batch --yes \
-              --pinentry-mode loopback --passphrase-fd 0 \
-              --no-tty 2>/dev/null || true
             reprepro -b . includedeb stable "$deb"
           done
         env:
+          GNUPGHOME: /home/runner/.gnupg
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
           GNUPGHOME: /home/runner/.gnupg
           GPG_TTY: /dev/null
 
