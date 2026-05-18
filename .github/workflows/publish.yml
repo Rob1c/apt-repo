@@ -48,7 +48,7 @@ jobs:
           mkdir -p conf
           cat > conf/distributions <<EOF
           Origin: Rob1c
-          Label: Rob1c Personal Repository
+          Label: Rob1c Personal APT Repository
           Codename: stable
           Architectures: amd64
           Components: main
