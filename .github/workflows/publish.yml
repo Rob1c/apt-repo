@@ -35,13 +35,12 @@ jobs:
           RUN_ID="${{ github.event.client_payload.run_id }}"
           PACKAGE="${{ github.event.client_payload.package }}"
 
-          # Scarica l'artifact dal repo sorgente
           gh run download "$RUN_ID" \
             --repo "Rob1c/$REPO" \
             --name "$PACKAGE" \
             --dir downloaded/
         env:
-          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+          GH_TOKEN: ${{ secrets.APT_REPO_TOKEN }}
 
       - name: Setup reprepro
         run: |
