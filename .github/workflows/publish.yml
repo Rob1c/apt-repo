@@ -71,7 +71,6 @@ jobs:
           Architectures: amd64
           Components: main
           Description: Volvex and Mimage apt repository
-          SignWith: F906DB2D0485473C5D7126795ADB545469E556DE
           EOF
 
       - name: Add package to reprepro
@@ -82,6 +81,14 @@ jobs:
         env:
           GNUPGHOME: /home/runner/.gnupg
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+
+      - name: Sign Release file
+        run: |
+          gpg --batch --yes --pinentry-mode loopback \
+            --passphrase "${{ secrets.GPG_PASSPHRASE }}" \
+            --armor --detach-sign \
+            -o dists/stable/InRelease \
+            dists/stable/Release
 
       - name: Commit and push repo
         run: |
