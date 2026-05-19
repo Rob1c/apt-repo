@@ -1,0 +1,60 @@
+ dpkg-buildpackage -us -uc -ui -b
+dpkg-buildpackage: info: source package volvex
+dpkg-buildpackage: info: source version 1.0.0-2
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by Roberto Chichiarelli <roberto.chichiarelli@gmail.com>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ debian/rules clean
+dh clean
+   dh_clean
+ debian/rules binary
+dh binary
+   dh_update_autotools_config
+   dh_autoreconf
+   create-stamp debian/debhelper-build-stamp
+   dh_prep
+   dh_auto_install --destdir=debian/volvex/
+   debian/rules override_dh_install
+make[1]: Entering directory '/home/runner/work/volvex/volvex/build_env/volvex-1.0.0'
+install -Dm755 volvex debian/volvex/usr/bin/volvex
+install -Dm644 volvex.py debian/volvex/usr/lib/volvex/volvex.py
+install -Dm644 volvex.desktop debian/volvex/usr/share/applications/volvex.desktop
+install -Dm644 volvex.svg debian/volvex/usr/share/icons/hicolor/scalable/apps/volvex.svg
+make[1]: Leaving directory '/home/runner/work/volvex/volvex/build_env/volvex-1.0.0'
+   dh_installdocs
+   dh_installchangelogs
+   dh_icons
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   dh_missing
+   dh_dwz -a
+   dh_strip -a
+   dh_makeshlibs -a
+   dh_shlibdeps -a
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'volvex' in '../volvex_1.0.0-2_amd64.deb'.
+ dpkg-genbuildinfo --build=binary -O../volvex_1.0.0-2_amd64.buildinfo
+ dpkg-genchanges --build=binary -O../volvex_1.0.0-2_amd64.changes
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source --after-build .
+dpkg-buildpackage: info: binary-only upload (no source included)
+Now running lintian volvex_1.0.0-2_amd64.changes ...
+E: volvex changes: bad-distribution-in-changes-file unstable
+W: volvex: desktop-command-not-in-package env [usr/share/applications/volvex.desktop]
+W: volvex: desktop-entry-invalid-category DiskDumping [usr/share/applications/volvex.desktop]
+W: volvex: desktop-entry-invalid-category DiskWriting [usr/share/applications/volvex.desktop]
+W: volvex: desktop-entry-invalid-category Floppy [usr/share/applications/volvex.desktop]
+W: volvex: desktop-entry-invalid-category Low-LevelWriting [usr/share/applications/volvex.desktop]
+W: volvex: desktop-entry-invalid-category Utilities [usr/share/applications/volvex.desktop]
+W: volvex: desktop-entry-lacks-main-category [usr/share/applications/volvex.desktop]
+W: volvex: duplicate-key-in-desktop Comment [usr/share/applications/volvex.desktop:59]
+W: volvex: duplicate-key-in-desktop Exec [usr/share/applications/volvex.desktop:70]
+W: volvex: no-manual-page [usr/bin/volvex]
+Finished running lintian.
