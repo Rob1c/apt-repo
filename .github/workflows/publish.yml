@@ -76,7 +76,8 @@ jobs:
       - name: Add package to reprepro
         run: |
           find downloaded/ -name "*.deb" | while read deb; do
-            reprepro -b . includedeb stable "$deb"
+            # --allow-overwrite : IMPORTANT
+            reprepro -b . --allow-overwrite includedeb stable "$deb"
           done
         env:
           GNUPGHOME: /home/runner/.gnupg
@@ -86,8 +87,15 @@ jobs:
         run: |
           gpg --batch --yes --pinentry-mode loopback \
             --passphrase "${{ secrets.GPG_PASSPHRASE }}" \
-            --armor --detach-sign \
+            --clearsign \
             -o dists/stable/InRelease \
+            dists/stable/Release
+
+          # generate Release.gpg
+          gpg --batch --yes --pinentry-mode loopback \
+            --passphrase "${{ secrets.GPG_PASSPHRASE }}" \
+            --armor --detach-sign \
+            -o dists/stable/Release.gpg \
             dists/stable/Release
 
       - name: Commit and push repo
