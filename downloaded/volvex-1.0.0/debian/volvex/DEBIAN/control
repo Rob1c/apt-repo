@@ -5,8 +5,6 @@ Maintainer: Roberto Chichiarelli <roberto.chichiarelli@gmail.com>
 Installed-Size: 57
 Depends: python3, libpyside6-dev, zenity, wine, wine32, libgtk-3-0t64
 Recommends: dtc
-Breaks: mimage
-Replaces: mimage
 Section: utils
 Priority: optional
 Description: KryoFlux's dtc + Mimage GUI frontend
