@@ -38,7 +38,7 @@ jobs:
           echo "allow-loopback-pinentry" >> ~/.gnupg/gpg-agent.conf
           echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf
           gpgconf --kill gpg-agent
-          gpg --armor --export > rob1c-key.asc
+          gpg --armor --export > volvex-key.asc
 
       - name: Resolve inputs
         id: inputs
