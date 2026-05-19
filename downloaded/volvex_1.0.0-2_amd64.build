@@ -18,7 +18,7 @@ dh binary
    debian/rules override_dh_install
 make[1]: Entering directory '/home/runner/work/volvex/volvex/build_env/volvex-1.0.0'
 install -Dm755 volvex debian/volvex/usr/bin/volvex
-install -Dm644 volvex.py debian/volvex/usr/lib/volvex/volvex.py
+install -Dm755 volvex.py debian/volvex/usr/lib/volvex/volvex.py
 install -Dm644 volvex.desktop debian/volvex/usr/share/applications/volvex.desktop
 install -Dm644 volvex.svg debian/volvex/usr/share/icons/hicolor/scalable/apps/volvex.svg
 make[1]: Leaving directory '/home/runner/work/volvex/volvex/build_env/volvex-1.0.0'
@@ -54,5 +54,6 @@ W: volvex: desktop-entry-invalid-category Floppy [usr/share/applications/volvex.
 W: volvex: desktop-entry-invalid-category Low-LevelWriting [usr/share/applications/volvex.desktop]
 W: volvex: desktop-entry-invalid-category Utilities [usr/share/applications/volvex.desktop]
 W: volvex: desktop-entry-lacks-main-category [usr/share/applications/volvex.desktop]
+W: volvex: executable-not-elf-or-script [usr/lib/volvex/volvex.py]
 W: volvex: no-manual-page [usr/bin/volvex]
 Finished running lintian.

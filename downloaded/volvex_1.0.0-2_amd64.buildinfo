@@ -4,14 +4,14 @@ Binary: volvex
 Architecture: amd64
 Version: 1.0.0-2
 Checksums-Md5:
- 9652cf9bafba624ca7dcdb64c57bb66a 11688 volvex_1.0.0-2_amd64.deb
+ 9aa78ae8838232289b85e8e97fca8ca7 11692 volvex_1.0.0-2_amd64.deb
 Checksums-Sha1:
- 1865dd6247accfc3582d15beeb74d35ee32b46b8 11688 volvex_1.0.0-2_amd64.deb
+ fcdfa2a3ef3a7b73bbaa625885d8b22e244c86b3 11692 volvex_1.0.0-2_amd64.deb
 Checksums-Sha256:
- eee779148a55b4e520be608888d16dc7e77c04ef2d6cf07d7b5fa8b81a95ed57 11688 volvex_1.0.0-2_amd64.deb
+ b8c0b52a268a7b533a35410c056944f20612ec65c348642ac49e98ef021a0307 11692 volvex_1.0.0-2_amd64.deb
 Build-Origin: Ubuntu
 Build-Architecture: amd64
-Build-Date: Tue, 19 May 2026 16:29:49 +0000
+Build-Date: Tue, 19 May 2026 16:47:10 +0000
 Build-Tainted-By:
  merged-usr-via-aliased-dirs
  usr-local-has-includes
