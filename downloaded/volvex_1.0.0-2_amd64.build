@@ -54,7 +54,5 @@ W: volvex: desktop-entry-invalid-category Floppy [usr/share/applications/volvex.
 W: volvex: desktop-entry-invalid-category Low-LevelWriting [usr/share/applications/volvex.desktop]
 W: volvex: desktop-entry-invalid-category Utilities [usr/share/applications/volvex.desktop]
 W: volvex: desktop-entry-lacks-main-category [usr/share/applications/volvex.desktop]
-W: volvex: duplicate-key-in-desktop Comment [usr/share/applications/volvex.desktop:59]
-W: volvex: duplicate-key-in-desktop Exec [usr/share/applications/volvex.desktop:70]
 W: volvex: no-manual-page [usr/bin/volvex]
 Finished running lintian.
