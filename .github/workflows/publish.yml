@@ -54,6 +54,9 @@ jobs:
 
       - name: Download package from triggering repo
         run: |
+          # dltes downloaded folder, if exist
+          rm -rf downloaded/
+
           gh run download "${{ steps.inputs.outputs.run_id }}" \
             --repo "Rob1c/${{ steps.inputs.outputs.repo }}" \
             --name "${{ steps.inputs.outputs.package }}" \
