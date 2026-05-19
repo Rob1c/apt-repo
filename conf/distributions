@@ -1,0 +1,6 @@
+Origin: Rob1c
+Label: Rob1c Personal APT Repository
+Codename: stable
+Architectures: amd64
+Components: main
+Description: Volvex and Mimage apt repository

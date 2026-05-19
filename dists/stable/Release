@@ -1,0 +1,19 @@
+Origin: Rob1c
+Label: Rob1c Personal APT Repository
+Codename: stable
+Date: Tue, 19 May 2026 14:13:59 UTC
+Architectures: amd64
+Components: main
+Description: Volvex and Mimage apt repository
+MD5Sum:
+ 3a59ea1fbce1d6e8a379ca7e8a3317a7 935 main/binary-amd64/Packages
+ 4c4bd3baccc9f82b90498103a0a691e2 622 main/binary-amd64/Packages.gz
+ c40fc609a255537f2f83a52094c092b5 133 main/binary-amd64/Release
+SHA1:
+ 75173de35bc317ae77feddf9480a20e4c2b1c134 935 main/binary-amd64/Packages
+ b3aa61a2c2efa05477f2d92c39fae920f6ffdb76 622 main/binary-amd64/Packages.gz
+ d27326488d12dfdb663e85644cfdda923b5e624f 133 main/binary-amd64/Release
+SHA256:
+ fe64a2f471f92ddbf6a4c55b33e2e6b70ffb3562245bf5fc15783c0efd60705c 935 main/binary-amd64/Packages
+ 4470efb7afa297f873d60e50aeafa8a0bcb3549bbf69a60cb1ea8b2930c5a675 622 main/binary-amd64/Packages.gz
+ d8e8a2a608921b1c13fef7b3ec60ff8a4a4809691a349301095a4e9821d7bce6 133 main/binary-amd64/Release

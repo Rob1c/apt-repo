@@ -1,0 +1,25 @@
+Package: volvex
+Version: 1.0.0-1
+Architecture: amd64
+Maintainer: Roberto Chichiarelli <roberto.chichiarelli@gmail.com>
+Installed-Size: 54
+Depends: python3, libpyside6-dev, zenity, wine, wine32, libgtk-3-0t64
+Recommends: dtc
+Breaks: mimage
+Replaces: mimage
+Priority: optional
+Section: utils
+Filename: pool/main/v/volvex/volvex_1.0.0-1_amd64.deb
+Size: 10036
+SHA256: d026c4f69001d8efd9ac641df318f51af1c02eccaecfe3a095a59ba598ea1eab
+SHA1: ca482345eb311301722f5525abc31be685d157d7
+MD5sum: 34e46f48f605374f2e63aecf66927b68
+Description: KryoFlux GUI frontend
+ Volvex is a PySide6 graphical frontend for KryoFlux dtc and mimage.
+ It allows dumping and writing floppy disk images through a clean
+ interface, with support for all dtc image types, track range selection,
+ preset save/load, and integrated terminal output.
+ .
+ Note: dtc (KryoFlux DTC) is proprietary software and must be installed
+ separately from the official KryoFlux website.
+
