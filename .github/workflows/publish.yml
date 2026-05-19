@@ -79,8 +79,14 @@ jobs:
       - name: Add package to reprepro
         run: |
           find downloaded/ -name "*.deb" | while read deb; do
-            # --allow-overwrite : IMPORTANT
-            reprepro -b . --allow-overwrite includedeb stable "$deb"
+            # Estraiamo il nome del pacchetto (es. volvex) dal file .deb per poterlo rimuovere se già presente
+            PKG_NAME=$(dpkg-deb -f "$deb" Package)
+
+            echo "Rimozione controllata di $PKG_NAME da stable per evitare conflitti di sovrascrittura..."
+            reprepro -b . removesrc stable "$PKG_NAME" || true
+
+            echo "Inclusione del nuovo pacchetto $deb..."
+            reprepro -b . includedeb stable "$deb"
           done
         env:
           GNUPGHOME: /home/runner/.gnupg
