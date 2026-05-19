@@ -1,0 +1,36 @@
+Format: 1.8
+Date: Thu, 07 May 2026 17:30:00 +0200
+Source: mimage
+Binary: mimage
+Built-For-Profiles: noudeb
+Architecture: source all
+Version: 1.0-1
+Distribution: unstable
+Urgency: low
+Maintainer: Roberto Chichiarelli <roberto.chichiarelli@gmail.com>
+Changed-By: Roberto Chichiarelli <roberto.chichiarelli@gmail.com>
+Description:
+ mimage     - Convert Floppy Images into .raw Stream Files.
+Closes: 123456
+Changes:
+ mimage (1.0-1) unstable; urgency=low
+ .
+   * Initial release. (Closes: #123456)
+Checksums-Sha1:
+ 3b172136d8471855099f5e347708e750fc2bdaf8 780 mimage_1.0-1.dsc
+ 1b338f050cd1ecad54127ceec8f730cc71b02675 38172 mimage_1.0.orig.tar.xz
+ 0760e218eb491c188465df6e0415aa6232cd84cd 1880 mimage_1.0-1.debian.tar.xz
+ 3bcfe499a90a1efff524f5ae66ae83f3aa0bfdc0 21644 mimage_1.0-1_all.deb
+ 9a27478cba00af815710c8eb51ddd976a92cc5f3 7612 mimage_1.0-1_amd64.buildinfo
+Checksums-Sha256:
+ a5858b1705ceda775b65df98f7e837e2ece78e6315edd3589ef5f16afa36e13e 780 mimage_1.0-1.dsc
+ e3c9a2770fefe266f29844ad52ed543466ae66e4fb0821883e4e156f44605868 38172 mimage_1.0.orig.tar.xz
+ 133762967a51a028ee8423679005bc84e2d86094a7163c2b69f055aa9b32ec7c 1880 mimage_1.0-1.debian.tar.xz
+ e0eb1139c41c8c030d4fd13f8d7a533092bb730098ea417c311808c6986dcfb3 21644 mimage_1.0-1_all.deb
+ fe5070922b3524a9f476b9d90c36c26f997d7fbf1926b8d419de5e8c7fc19fc9 7612 mimage_1.0-1_amd64.buildinfo
+Files:
+ eb526efb711126cc5fb81439c8652c9c 780 non-free/utils optional mimage_1.0-1.dsc
+ 5201ea5a5605374b735ee4bb6e952c50 38172 non-free/utils optional mimage_1.0.orig.tar.xz
+ 50a2c0479178c3abe7817b35af1ef997 1880 non-free/utils optional mimage_1.0-1.debian.tar.xz
+ 11e60bcd63ed1d67dffa42fca4cc161f 21644 non-free/utils optional mimage_1.0-1_all.deb
+ b5c746db48e03ec3615b5b88dfb2e0d7 7612 non-free/utils optional mimage_1.0-1_amd64.buildinfo

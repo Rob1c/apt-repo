@@ -1,3 +1,19 @@
+Package: mimage
+Version: 1.0-1
+Architecture: all
+Maintainer: Roberto Chichiarelli <roberto.chichiarelli@gmail.com>
+Installed-Size: 66
+Depends: wine | wine64 | wine32
+Priority: optional
+Section: non-free/utils
+Filename: pool/main/m/mimage/mimage_1.0-1_all.deb
+Size: 21644
+SHA256: e0eb1139c41c8c030d4fd13f8d7a533092bb730098ea417c311808c6986dcfb3
+SHA1: 3bcfe499a90a1efff524f5ae66ae83f3aa0bfdc0
+MD5sum: 11e60bcd63ed1d67dffa42fca4cc161f
+Description: Convert Floppy Images into .raw Stream Files.
+ It acts as a wrapper for ZrX's "Macintosh.exe" utility.
+
 Package: volvex
 Version: 1.0.0-1
 Architecture: amd64
