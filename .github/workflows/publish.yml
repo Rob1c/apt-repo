@@ -4,6 +4,16 @@ on:
   repository_dispatch:
     types: [new-package]
   workflow_dispatch:
+    inputs:
+      repo:
+        description: 'Source repo (e.g. volvex)'
+        required: true
+      run_id:
+        description: 'Run ID of the build workflow'
+        required: true
+      package:
+        description: 'Artifact name'
+        required: true
 
 jobs:
   publish:
@@ -29,15 +39,24 @@ jobs:
           echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf
           gpgconf --kill gpg-agent
 
+      - name: Resolve inputs
+        id: inputs
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "repo=${{ github.event.inputs.repo }}" >> $GITHUB_OUTPUT
+            echo "run_id=${{ github.event.inputs.run_id }}" >> $GITHUB_OUTPUT
+            echo "package=${{ github.event.inputs.package }}" >> $GITHUB_OUTPUT
+          else
+            echo "repo=${{ github.event.client_payload.repo }}" >> $GITHUB_OUTPUT
+            echo "run_id=${{ github.event.client_payload.run_id }}" >> $GITHUB_OUTPUT
+            echo "package=${{ github.event.client_payload.package }}" >> $GITHUB_OUTPUT
+          fi
+
       - name: Download package from triggering repo
         run: |
-          REPO="${{ github.event.client_payload.repo }}"
-          RUN_ID="${{ github.event.client_payload.run_id }}"
-          PACKAGE="${{ github.event.client_payload.package }}"
-
-          gh run download "$RUN_ID" \
-            --repo "Rob1c/$REPO" \
-            --name "$PACKAGE" \
+          gh run download "${{ steps.inputs.outputs.run_id }}" \
+            --repo "Rob1c/${{ steps.inputs.outputs.repo }}" \
+            --name "${{ steps.inputs.outputs.package }}" \
             --dir downloaded/
         env:
           GH_TOKEN: ${{ secrets.APT_REPO_TOKEN }}
@@ -69,7 +88,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add -A
-          git diff --staged --quiet || git commit -m "Update apt repo: ${{ github.event.client_payload.package }}"
+          git diff --staged --quiet || git commit -m "Update apt repo: ${{ steps.inputs.outputs.package }}"
           git push
 
       - name: Deploy to GitHub Pages
