@@ -43,7 +43,7 @@ Bundled `Macintosh.exe` is copyright by ZrX (KryoFlux Forums), included as custo
 
 - **Latest Version**: `1.0.0`
 - **Architecture**: `x86_64 (amd64)`
-- **Dependencies**: `python3`, `python3-pyside6`, `zenity`, `wine`, `libgtk-3-0`
+- **Dependencies**: `python3`, `python3-pyside6.qtwidgets`, `python3-pyside6.qtcore`, `python3-pyside6.qtgui`, `zenity`, `wine`, `libgtk-3-0t64`
 - **Recommends**: `dtc` (install separately from [kryoflux.com](https://www.kryoflux.com/))
 - **Bundled**: `mimage` (latest release, fetched automatically at build time)
 
@@ -51,7 +51,7 @@ Bundled `Macintosh.exe` is copyright by ZrX (KryoFlux Forums), included as custo
 
 ## Debian Based Systems
 You can install Volvex in two different ways:
-1. Via repo:
+### 1. Via repo:
 
 ### Add the repository
 ```bash
@@ -61,7 +61,7 @@ sudo apt update
 sudo apt install volvex
 ```
 
-2. Otherwise, you can install it via the .deb package (CI/CD generated).
+### 2. Otherwise, you can install it via the .deb package (CI/CD generated).
 You can use apt (**recommended**, resolves dependencies automatically):
 
 ```bash
