@@ -52,8 +52,6 @@ W: volvex: desktop-entry-invalid-category DiskDumping [usr/share/applications/vo
 W: volvex: desktop-entry-invalid-category DiskWriting [usr/share/applications/volvex.desktop]
 W: volvex: desktop-entry-invalid-category Floppy [usr/share/applications/volvex.desktop]
 W: volvex: desktop-entry-invalid-category Low-LevelWriting [usr/share/applications/volvex.desktop]
-W: volvex: desktop-entry-invalid-category Utilities [usr/share/applications/volvex.desktop]
-W: volvex: desktop-entry-lacks-main-category [usr/share/applications/volvex.desktop]
 W: volvex: executable-not-elf-or-script [usr/lib/volvex/volvex.py]
 W: volvex: no-manual-page [usr/bin/volvex]
 Finished running lintian.
