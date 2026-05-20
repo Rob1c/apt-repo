@@ -17,11 +17,11 @@ Changes:
    * Fixed control description (added "Mimage GUI frontend")
    * Added multi-language name and comment support (up to 27 languages)
 Checksums-Sha1:
- 13f4a49da41de1b4af28d67a58112ad21e57b741 7416 volvex_1.0.0-2_amd64.buildinfo
- dd3670c6189f2c8efd627ea769d5c74fc49c2a56 11716 volvex_1.0.0-2_amd64.deb
+ 1273125ad74bee14c5853904c2c12c7244cb3e47 7416 volvex_1.0.0-2_amd64.buildinfo
+ 64ae2b318561f59e90d45f5f9a30b08a10e34898 11730 volvex_1.0.0-2_amd64.deb
 Checksums-Sha256:
- 8dd54e2db4b5fb4f9968a1db85da9122087bc27ee950da95899828b9d830514f 7416 volvex_1.0.0-2_amd64.buildinfo
- 741da07911c7e08f65791a9d1b34c13724f8ead3575104105c8eb8c541a79cf7 11716 volvex_1.0.0-2_amd64.deb
+ 87eebcd849901e5b1aae3e9abb9b96acc68b633a221aa5627cc642abf591c679 7416 volvex_1.0.0-2_amd64.buildinfo
+ 9b56fbfa57878a7407be0d2fb9e06688726165fdb3e1367741c3a6ba82417a43 11730 volvex_1.0.0-2_amd64.deb
 Files:
- ad17da63b60e513c81313c35ec3ee213 7416 utils optional volvex_1.0.0-2_amd64.buildinfo
- 68805ac26f80847213a4c8f18530574e 11716 utils optional volvex_1.0.0-2_amd64.deb
+ 130fcd213a3296737f9e2bf21b374436 7416 utils optional volvex_1.0.0-2_amd64.buildinfo
+ 6102b35d597e8231c215e08ca70f263a 11730 utils optional volvex_1.0.0-2_amd64.deb
