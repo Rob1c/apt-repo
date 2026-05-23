@@ -1,6 +1,6 @@
  dpkg-buildpackage -us -uc -ui -b
 dpkg-buildpackage: info: source package volvex
-dpkg-buildpackage: info: source version 1.0.0-2
+dpkg-buildpackage: info: source version 1.0.0-3
 dpkg-buildpackage: info: source distribution unstable
 dpkg-buildpackage: info: source changed by Roberto Chichiarelli <roberto.chichiarelli@gmail.com>
  dpkg-source --before-build .
@@ -31,21 +31,17 @@ make[1]: Leaving directory '/home/runner/work/volvex/volvex/build_env/volvex-1.0
    dh_compress
    dh_fixperms
    dh_missing
-   dh_dwz -a
-   dh_strip -a
-   dh_makeshlibs -a
-   dh_shlibdeps -a
    dh_installdeb
    dh_gencontrol
    dh_md5sums
    dh_builddeb
-dpkg-deb: building package 'volvex' in '../volvex_1.0.0-2_amd64.deb'.
- dpkg-genbuildinfo --build=binary -O../volvex_1.0.0-2_amd64.buildinfo
- dpkg-genchanges --build=binary -O../volvex_1.0.0-2_amd64.changes
+dpkg-deb: building package 'volvex' in '../volvex_1.0.0-3_all.deb'.
+ dpkg-genbuildinfo --build=binary -O../volvex_1.0.0-3_amd64.buildinfo
+ dpkg-genchanges --build=binary -O../volvex_1.0.0-3_amd64.changes
 dpkg-genchanges: info: binary-only upload (no source code included)
  dpkg-source --after-build .
 dpkg-buildpackage: info: binary-only upload (no source included)
-Now running lintian volvex_1.0.0-2_amd64.changes ...
+Now running lintian volvex_1.0.0-3_amd64.changes ...
 E: volvex changes: bad-distribution-in-changes-file unstable
 W: volvex: desktop-command-not-in-package env [usr/share/applications/volvex.desktop]
 W: volvex: desktop-entry-invalid-category DiskDumping [usr/share/applications/volvex.desktop]

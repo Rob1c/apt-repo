@@ -1,6 +1,6 @@
 5a32049e9fb80ab764aa2a6ff982f764  usr/bin/volvex
 5d7694f524bffa0fe7fb77467240e341  usr/lib/volvex/volvex.py
 ef3587d1dff17bb2763a5e77ebc8a3bc  usr/share/applications/volvex.desktop
-40f59f69f5d9a3da91b40acbecf28484  usr/share/doc/volvex/changelog.Debian.gz
-2620663409c124e06033da4319fd84df  usr/share/doc/volvex/copyright
+59ab3e612a9b60e1429280311fe309a2  usr/share/doc/volvex/changelog.Debian.gz
+c9d8114461853ec320858827aabfa55b  usr/share/doc/volvex/copyright
 9d742674a364edbded55f345b235942d  usr/share/icons/hicolor/scalable/apps/volvex.svg

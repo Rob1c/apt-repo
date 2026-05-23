@@ -1,0 +1,31 @@
+Format: 1.8
+Date: Sat, 23 May 2026 15:20:00 +0200
+Source: volvex
+Binary: volvex
+Built-For-Profiles: noudeb
+Architecture: all
+Version: 1.0.0-3
+Distribution: unstable
+Urgency: low
+Maintainer: Roberto Chichiarelli <roberto.chichiarelli@gmail.com>
+Changed-By: Roberto Chichiarelli <roberto.chichiarelli@gmail.com>
+Description:
+ volvex     - KryoFlux dtc GUI frontend
+Changes:
+ volvex (1.0.0-3) unstable; urgency=low
+ .
+   * Changed license from CC-BY-NC-4.0 to GPL-3.0-only
+   * Removed mimage and Macintosh.exe from package (now a separate project)
+   * Removed wine from dependencies (was only needed by mimage)
+   * Changed Architecture from amd64 to all (pure Python)
+   * Added mimage to Recommends
+   * Updated debian/install, debian/postinst accordingly
+Checksums-Sha1:
+ 1b9816dded90f16f0e3d2ec819789aa1580de9dc 11860 volvex_1.0.0-3_all.deb
+ 298267ffce15604e5b7a5b6d40d7f019a816904b 7408 volvex_1.0.0-3_amd64.buildinfo
+Checksums-Sha256:
+ 3b50e7a4c21390fed6ad4e21fff51acfccd296c5215464bed572aed54dfd5524 11860 volvex_1.0.0-3_all.deb
+ 3701ecc39350c048138a4628f8cf103e8e1429dfd8b4284713e51d796dbff87a 7408 volvex_1.0.0-3_amd64.buildinfo
+Files:
+ 3788a4a4b25f7affe753fe268198a12c 11860 utils optional volvex_1.0.0-3_all.deb
+ b136831d8fc3a2e693a89803ba46caff 7408 utils optional volvex_1.0.0-3_amd64.buildinfo

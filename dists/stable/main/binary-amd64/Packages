@@ -15,20 +15,20 @@ Description: Convert Floppy Images into .raw Stream Files.
  It acts as a wrapper for ZrX's "Macintosh.exe" utility.
 
 Package: volvex
-Version: 1.0.0-2
-Architecture: amd64
+Version: 1.0.0-3
+Architecture: all
 Maintainer: Roberto Chichiarelli <roberto.chichiarelli@gmail.com>
 Installed-Size: 57
-Depends: python3, python3-pyside6.qtwidgets, python3-pyside6.qtcore, python3-pyside6.qtgui, zenity, wine, libgtk-3-0t64
-Recommends: dtc
+Depends: python3, python3-pyside6.qtwidgets, python3-pyside6.qtcore, python3-pyside6.qtgui, zenity, libgtk-3-0t64
+Recommends: dtc, mimage
 Priority: optional
 Section: utils
-Filename: pool/main/v/volvex/volvex_1.0.0-2_amd64.deb
-Size: 11730
-SHA256: 9b56fbfa57878a7407be0d2fb9e06688726165fdb3e1367741c3a6ba82417a43
-SHA1: 64ae2b318561f59e90d45f5f9a30b08a10e34898
-MD5sum: 6102b35d597e8231c215e08ca70f263a
-Description: KryoFlux's dtc + Mimage GUI frontend
+Filename: pool/main/v/volvex/volvex_1.0.0-3_all.deb
+Size: 11860
+SHA256: 3b50e7a4c21390fed6ad4e21fff51acfccd296c5215464bed572aed54dfd5524
+SHA1: 1b9816dded90f16f0e3d2ec819789aa1580de9dc
+MD5sum: 3788a4a4b25f7affe753fe268198a12c
+Description: KryoFlux dtc GUI frontend
  Volvex is a PySide6 graphical frontend for KryoFlux dtc and mimage.
  It allows dumping and writing floppy disk images through a clean
  interface, with support for all dtc image types, track range selection,
