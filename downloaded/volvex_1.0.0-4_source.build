@@ -1,0 +1,23 @@
+ dpkg-buildpackage -us -uc -ui -S
+dpkg-buildpackage: info: source package volvex
+dpkg-buildpackage: info: source version 1.0.0-4
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by Roberto Chichiarelli <roberto.chichiarelli@gmail.com>
+ dpkg-source --before-build .
+ debian/rules clean
+dh clean
+   dh_clean
+ dpkg-source -b .
+dpkg-source: info: using source format '3.0 (quilt)'
+dpkg-source: info: building volvex using existing ./volvex_1.0.0.orig.tar.xz
+dpkg-source: info: building volvex in volvex_1.0.0-4.debian.tar.xz
+dpkg-source: info: building volvex in volvex_1.0.0-4.dsc
+ dpkg-genbuildinfo --build=source -O../volvex_1.0.0-4_source.buildinfo
+ dpkg-genchanges --build=source -O../volvex_1.0.0-4_source.changes
+dpkg-genchanges: info: not including original source code in upload
+ dpkg-source --after-build .
+dpkg-buildpackage: info: source-only, diff-only upload (original source NOT included)
+Now running lintian volvex_1.0.0-4_source.changes ...
+E: volvex changes: bad-distribution-in-changes-file unstable
+W: volvex source: newer-standards-version 4.7.3 (current is 4.6.2)
+Finished running lintian.

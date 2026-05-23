@@ -1,16 +1,16 @@
 Format: 1.0
 Source: volvex
 Architecture: source
-Version: 1.0.0-3
+Version: 1.0.0-4
 Checksums-Md5:
- 267e91bcb0058ded5a46411e01d91cd9 527 volvex_1.0.0-3.dsc
+ 9111c44c70aebabd0cf83d9c801b0b92 920 volvex_1.0.0-4.dsc
 Checksums-Sha1:
- 0d77028ad948484284b802c2da0801a8f6e47789 527 volvex_1.0.0-3.dsc
+ 1d4ee5939220749e1aa3b53885622a8942c92a36 920 volvex_1.0.0-4.dsc
 Checksums-Sha256:
- 0525478b9b29dcb9ecf7124f4620054fc9dc28c186474bf36d65f53c59d497ee 527 volvex_1.0.0-3.dsc
+ d446dd623162e2598a02e0092ddc49e9494d2f97187dbb09f9d78ec2e8125de1 920 volvex_1.0.0-4.dsc
 Build-Origin: Ubuntu
 Build-Architecture: amd64
-Build-Date: Sat, 23 May 2026 13:47:04 +0000
+Build-Date: Sat, 23 May 2026 17:19:28 +0000
 Build-Tainted-By:
  merged-usr-via-aliased-dirs
  usr-local-has-includes
@@ -209,4 +209,4 @@ Environment:
  DEB_BUILD_OPTIONS="parallel=4"
  DEB_BUILD_PROFILES="noudeb"
  LANG="C.UTF-8"
- SOURCE_DATE_EPOCH="1779542400"
+ SOURCE_DATE_EPOCH="1779556620"

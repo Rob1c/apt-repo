@@ -1,0 +1,30 @@
+Format: 1.8
+Date: Sat, 23 May 2026 19:17:00 +0200
+Source: volvex
+Built-For-Profiles: noudeb
+Architecture: source
+Version: 1.0.0-4
+Distribution: unstable
+Urgency: low
+Maintainer: Roberto Chichiarelli <roberto.chichiarelli@gmail.com>
+Changed-By: Roberto Chichiarelli <roberto.chichiarelli@gmail.com>
+Changes:
+ volvex (1.0.0-4) unstable; urgency=low
+ .
+   * Added debian/source/format (3.0 quilt)
+   * Bumped Standards-Version to 4.7.3
+   * Added Homepage, Vcs-Git, Vcs-Browser to debian/control
+   * Added Upstream-Contact to debian/copyright
+   * Added #DEBHELPER# token to postinst and postrm
+Checksums-Sha1:
+ 1d4ee5939220749e1aa3b53885622a8942c92a36 920 volvex_1.0.0-4.dsc
+ 4d7f1803216804ba1a53ddeed4d72d42e873d667 1760 volvex_1.0.0-4.debian.tar.xz
+ 35fa085fd716a589a91acca31bbe53f18c9878aa 7378 volvex_1.0.0-4_source.buildinfo
+Checksums-Sha256:
+ d446dd623162e2598a02e0092ddc49e9494d2f97187dbb09f9d78ec2e8125de1 920 volvex_1.0.0-4.dsc
+ a52a5a6646cc9ea7728d305b10a188018d619079295a0812c90c4c0bf63e0f1f 1760 volvex_1.0.0-4.debian.tar.xz
+ c7bd18643af0cfaac73886b499851d5ccf84ba7f1c72c4340464bcdb72d7d5b2 7378 volvex_1.0.0-4_source.buildinfo
+Files:
+ 9111c44c70aebabd0cf83d9c801b0b92 920 utils optional volvex_1.0.0-4.dsc
+ 1814035379efbe5a0da5bdf40b8fce11 1760 utils optional volvex_1.0.0-4.debian.tar.xz
+ a200c0436be34d928ba2b134264172d5 7378 utils optional volvex_1.0.0-4_source.buildinfo
