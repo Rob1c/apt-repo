@@ -1,0 +1,31 @@
+Format: 1.8
+Date: Sat, 23 May 2026 15:20:00 +0200
+Source: volvex
+Built-For-Profiles: noudeb
+Architecture: source
+Version: 1.0.0-3
+Distribution: unstable
+Urgency: low
+Maintainer: Roberto Chichiarelli <roberto.chichiarelli@gmail.com>
+Changed-By: Roberto Chichiarelli <roberto.chichiarelli@gmail.com>
+Changes:
+ volvex (1.0.0-3) unstable; urgency=low
+ .
+   * Changed license from CC-BY-NC-4.0 to GPL-3.0-only
+   * Removed mimage and Macintosh.exe from package (now a separate project)
+   * Removed wine from dependencies (was only needed by mimage)
+   * Changed Architecture from amd64 to all (pure Python)
+   * Added mimage to Recommends
+   * Updated debian/install, debian/postinst accordingly
+Checksums-Sha1:
+ 0d77028ad948484284b802c2da0801a8f6e47789 527 volvex_1.0.0-3.dsc
+ cc4436ab476b914a198f11dba4d046faf48ce238 114026 volvex_1.0.0-3.tar.gz
+ 4691ed00f42728a163203db1c202869243d8fdc4 7378 volvex_1.0.0-3_source.buildinfo
+Checksums-Sha256:
+ 0525478b9b29dcb9ecf7124f4620054fc9dc28c186474bf36d65f53c59d497ee 527 volvex_1.0.0-3.dsc
+ df80b9bfee0755caacb427f7a9feeabc9c8262053445ae6a86f9180b488e5ed3 114026 volvex_1.0.0-3.tar.gz
+ e456a286b9870773236bf46ce23a0f1ab546415c1981c850faf1754ff20e6012 7378 volvex_1.0.0-3_source.buildinfo
+Files:
+ 267e91bcb0058ded5a46411e01d91cd9 527 utils optional volvex_1.0.0-3.dsc
+ 5208da0ccbefefb0e1d1b1ff0e21e683 114026 utils optional volvex_1.0.0-3.tar.gz
+ 430057f64d2e1177317c28af196af79d 7378 utils optional volvex_1.0.0-3_source.buildinfo

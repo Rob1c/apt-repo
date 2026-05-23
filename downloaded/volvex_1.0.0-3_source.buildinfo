@@ -1,17 +1,16 @@
 Format: 1.0
 Source: volvex
-Binary: volvex
-Architecture: all
+Architecture: source
 Version: 1.0.0-3
 Checksums-Md5:
- 3788a4a4b25f7affe753fe268198a12c 11860 volvex_1.0.0-3_all.deb
+ 267e91bcb0058ded5a46411e01d91cd9 527 volvex_1.0.0-3.dsc
 Checksums-Sha1:
- 1b9816dded90f16f0e3d2ec819789aa1580de9dc 11860 volvex_1.0.0-3_all.deb
+ 0d77028ad948484284b802c2da0801a8f6e47789 527 volvex_1.0.0-3.dsc
 Checksums-Sha256:
- 3b50e7a4c21390fed6ad4e21fff51acfccd296c5215464bed572aed54dfd5524 11860 volvex_1.0.0-3_all.deb
+ 0525478b9b29dcb9ecf7124f4620054fc9dc28c186474bf36d65f53c59d497ee 527 volvex_1.0.0-3.dsc
 Build-Origin: Ubuntu
 Build-Architecture: amd64
-Build-Date: Sat, 23 May 2026 13:46:16 +0000
+Build-Date: Sat, 23 May 2026 13:47:04 +0000
 Build-Tainted-By:
  merged-usr-via-aliased-dirs
  usr-local-has-includes
