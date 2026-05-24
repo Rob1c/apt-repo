@@ -17,14 +17,17 @@ Changes:
    * Added Upstream-Contact to debian/copyright
    * Added #DEBHELPER# token to postinst and postrm
 Checksums-Sha1:
- ce6a82fb0acac5dce636a8483cb1d85033eb3e2b 920 volvex_1.0.0-4.dsc
+ eea9750b443ee2433d50e876f9a03b621cfbb7cd 920 volvex_1.0.0-4.dsc
+ a1e20209a6fd870db5ed7e28f8effc2633346aeb 108692 volvex_1.0.0.orig.tar.xz
  4d7f1803216804ba1a53ddeed4d72d42e873d667 1760 volvex_1.0.0-4.debian.tar.xz
- 142eecbc3e8dbfb7cb0fb3d0ad2587d11bb76802 7378 volvex_1.0.0-4_source.buildinfo
+ af49e282e0fc3f23aba896fad6867572dd22ed48 7378 volvex_1.0.0-4_source.buildinfo
 Checksums-Sha256:
- 481d6a364fbb60323460983d891a9a11ca85afc1ece78f9f4b1de548fb1e3933 920 volvex_1.0.0-4.dsc
+ e86da1b884558906116b7da33a6499d5d8064216d675ff409251f152b50b92ad 920 volvex_1.0.0-4.dsc
+ 3b035b42435614abfa5855457d71fd86f16a117b3efc7c993131c251c96cba55 108692 volvex_1.0.0.orig.tar.xz
  a52a5a6646cc9ea7728d305b10a188018d619079295a0812c90c4c0bf63e0f1f 1760 volvex_1.0.0-4.debian.tar.xz
- cfb45ca8cb9c5289acd44b256eac3cbd44b1b911526e37c7c92188f430084c17 7378 volvex_1.0.0-4_source.buildinfo
+ 14594426ed14b5932723fd82585b80252261db577838f7fc5db3bca8cd22344b 7378 volvex_1.0.0-4_source.buildinfo
 Files:
- 278a15a4386b57d76743629313ae2853 920 utils optional volvex_1.0.0-4.dsc
+ aa31bfbac9afe7bc3a76aa56254ff7bf 920 utils optional volvex_1.0.0-4.dsc
+ 8fc1efca9568053481a4d02fefec2499 108692 utils optional volvex_1.0.0.orig.tar.xz
  1814035379efbe5a0da5bdf40b8fce11 1760 utils optional volvex_1.0.0-4.debian.tar.xz
- b8466874868fedf0db676342beeb7a1b 7378 utils optional volvex_1.0.0-4_source.buildinfo
+ 1a37cae9044d1f13675130dd0c503451 7378 utils optional volvex_1.0.0-4_source.buildinfo
