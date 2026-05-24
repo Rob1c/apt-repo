@@ -21,10 +21,10 @@ Changes:
    * Added #DEBHELPER# token to postinst and postrm
 Checksums-Sha1:
  c9d15a0b426d5594743d781b5aeea67a803aff59 12070 volvex_1.0.0-4_all.deb
- 26ac37f101faefa09d56b7bd7e55596bf080e4d2 7408 volvex_1.0.0-4_amd64.buildinfo
+ 3f437d40233d600ed125a5ec485c11500d36010f 7408 volvex_1.0.0-4_amd64.buildinfo
 Checksums-Sha256:
  1c1f366b58f7111bd88d2f827f9240dd98a87c41649021782f5272a05eeeec02 12070 volvex_1.0.0-4_all.deb
- 9548646332a3f0b170ac1cf354ab697a339943484a440c056b20001972b25562 7408 volvex_1.0.0-4_amd64.buildinfo
+ d509f2872d64fef9b85e4ffbe302f667854145f4c90d663f963097b3369ef722 7408 volvex_1.0.0-4_amd64.buildinfo
 Files:
  349c5f526d468bc4eae6c3deec0b2aa6 12070 utils optional volvex_1.0.0-4_all.deb
- b5ba0dd56a3ee88552668ce254e7e0f1 7408 utils optional volvex_1.0.0-4_amd64.buildinfo
+ 3e7e59c49b64e4a3ecbda13d474c0217 7408 utils optional volvex_1.0.0-4_amd64.buildinfo
